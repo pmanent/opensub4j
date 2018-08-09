@@ -14,9 +14,9 @@ public class OpenSubtitlesFileHashCalculatorTest {
         // given:
         FileHashCalculator calc = new OpenSubtitlesFileHashCalculator();
         // when:
-        String hash = calc.calculateHash(new File(this.getClass().getResource("/breakdance.avi").toURI()));
+        String hash = calc.calculateHash(new File(this.getClass().getResource("/simplelogger.properties").toURI()));
         // then:
-        assertEquals(hash, "8e245d9679d31e12");
+        assertEquals(hash, "87a408c3e6029b6b");
     }
 
 }

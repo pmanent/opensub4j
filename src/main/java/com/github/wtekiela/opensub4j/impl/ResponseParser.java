@@ -26,7 +26,7 @@ class ResponseParser {
 
     public <T> List<T> bindList(Class<T> clazz, Map<String, Object[]> response) throws InstantiationException, IllegalAccessException {
         Object[] rawData = response.get(LIST_DATA_KEY);
-        List<T> list = new ArrayList<>(rawData.length);
+        List<T> list = new ArrayList<>();
         for (Object obj : rawData) {
             list.add(bind(clazz.newInstance(), (Map) obj));
         }
