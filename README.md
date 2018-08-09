@@ -4,27 +4,14 @@ OpenSub4j is an open source Java library for opensubtites. It provides an object
 
 ## Installation
 
-Simply add the dependency to gradle/maven, either to the latest release:
+Simply add the dependency to the pom.xml with the latest release:
 
 ```
-dependencies {
-    compile 'com.github.wtekiela:opensub4j:0.1.2'
-}
-```
-
-or to the latest build:
-
-```
-repositories {
-	maven {
-		url 'https://oss.sonatype.org/content/repositories/snapshots/'
-	}
-	mavenCentral()
-}
-
-dependencies {
-    compile 'com.github.wtekiela:opensub4j:0.2.0-SNAPSHOT'
-}
+<dependency>
+    <groupId>com.github.pmanent</groupId>
+    <artifactId>opensub4j</artifactId>
+    <version>0.1.3</version>
+</dependency>
 ```
 
 ## Usage
@@ -73,14 +60,13 @@ List<SubtitleFile> subtitleFiles = osClient.downloadSubtitles(subtitleInfo.getId
 
 Library uses slf4j logging facade, it can be bound to any logger implementation that has bindings to slf4j. 
 
-For simple logging:
-```
-runtime 'org.slf4j:slf4j-simple:1.7.+'
-``` 
-
 For binding with log4j:
 ```
-runtime 'org.slf4j:slf4j-log4j12:1.7.+'
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>1.7.25</version>
+</dependency>
 ```
 
 For more information please refer to slf4j documentation.
@@ -89,7 +75,11 @@ For more information please refer to slf4j documentation.
 
 To build the library from sources, you just need to invoke:
 ```
-./gradlew assemble
+mvn clean package
+```
+Optional you can build the library without executing tests:
+```
+mvn clean package -DskipTests
 ```
 
 Note: Java JDK 8 is required.
