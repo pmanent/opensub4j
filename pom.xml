@@ -3,6 +3,7 @@
   <groupId>com.github.pmanent</groupId>
   <artifactId>opensub4j</artifactId>
   <version>0.1.3</version>
+  <url>https://github.com/pmanent/opensub4j</url>
   <name>Subtitle wrapper</name>
   <description>For search and download</description>
   <licenses>
@@ -13,7 +14,7 @@
   </licenses>
   <developers>
     <developer>
-      <name>Pere Manentr</name>
+      <name>Pere Manent</name>
       <email>manent.pere@gmail.com</email>
       <organization>pmanent</organization>
       <url>https://github.com/pmanent/opensub4j</url>
